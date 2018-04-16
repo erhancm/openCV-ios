@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="openCV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CRh-sW-3gu">
+                                <rect key="frame" x="16" y="28" width="343" height="267"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-9l-CPk">
+                                <rect key="frame" x="16" y="311.5" width="343" height="267"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqg-dr-TRZ">
+                                <rect key="frame" x="137" y="586" width="101" height="30"/>
+                                <state key="normal" title="Convert Image"/>
+                                <connections>
+                                    <action selector="convertImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H7D-6Y-ll6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acr-V9-9ud">
+                                <rect key="frame" x="166" y="624" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="acr-V9-9ud" firstAttribute="top" secondItem="cqg-dr-TRZ" secondAttribute="bottom" constant="8" id="3CU-S2-p19"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CRh-sW-3gu" secondAttribute="trailing" constant="16" id="5N4-Zk-STK"/>
+                            <constraint firstItem="Gdo-9l-CPk" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="HUB-mI-NMG"/>
+                            <constraint firstItem="Gdo-9l-CPk" firstAttribute="top" secondItem="CRh-sW-3gu" secondAttribute="bottom" constant="16" id="Nlv-SD-GcB"/>
+                            <constraint firstItem="CRh-sW-3gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OME-1V-u86"/>
+                            <constraint firstItem="Gdo-9l-CPk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PEE-cy-ZVJ"/>
+                            <constraint firstItem="acr-V9-9ud" firstAttribute="centerX" secondItem="cqg-dr-TRZ" secondAttribute="centerX" id="RJa-oR-orv"/>
+                            <constraint firstItem="cqg-dr-TRZ" firstAttribute="centerX" secondItem="Gdo-9l-CPk" secondAttribute="centerX" id="SYe-7B-0pv"/>
+                            <constraint firstItem="CRh-sW-3gu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="gOv-jv-KJr"/>
+                            <constraint firstItem="CRh-sW-3gu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="jVd-AO-sf6"/>
+                            <constraint firstItem="cqg-dr-TRZ" firstAttribute="top" secondItem="Gdo-9l-CPk" secondAttribute="bottom" constant="7.5" id="lqH-kF-aJv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gdo-9l-CPk" secondAttribute="trailing" constant="16" id="sO2-Qa-jbk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="inputImageView" destination="CRh-sW-3gu" id="7ak-87-eLe"/>
+                        <outlet property="openCVVersionLabel" destination="acr-V9-9ud" id="UEt-jg-MMw"/>
+                        <outlet property="outputImageView" destination="Gdo-9l-CPk" id="Jjc-Ee-v25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="131.78410794602701"/>
+        </scene>
+    </scenes>
+</document>
